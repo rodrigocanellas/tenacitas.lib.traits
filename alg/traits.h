@@ -6,8 +6,8 @@
 
 /// \author Rodrigo Canellas - rodrigo.canellas at gmail.com
 
-#include <tenacitas/lib/type/alg/pair.h>
-#include <tenacitas/lib/type/alg/pointer.h>
-#include <tenacitas/lib/type/alg/tuple.h>
+#include <tenacitas.lib.traits/alg/pair.h>
+#include <tenacitas.lib.traits/alg/pointer.h>
+#include <tenacitas.lib.traits/alg/tuple.h>
 
 #endif
