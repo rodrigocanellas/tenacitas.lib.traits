@@ -15,7 +15,7 @@ namespace tenacitas::lib::traits::cpt {
 // \file Solution based on
 // https://stackoverflow.com/questions/68443804/c20-concept-to-check-tuple-like-types
 
-template <class t_tuple, std::size_t t_idx>
+template <typename t_tuple, std::size_t t_idx>
 concept has_tuple_element = requires(t_tuple t) {
   typename std::tuple_element_t<t_idx, std::remove_const_t<t_tuple>>;
   {
@@ -23,7 +23,7 @@ concept has_tuple_element = requires(t_tuple t) {
     } -> std::convertible_to<const std::tuple_element_t<t_idx, t_tuple> &>;
 };
 
-template <class t_tuple>
+template <typename t_tuple>
 concept tuple_like = !std::is_reference_v<t_tuple> && requires(t_tuple t) {
   typename std::tuple_size<t_tuple>::type;
   requires std::derived_from<
